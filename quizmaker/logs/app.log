@@ -1,0 +1,31 @@
+2022-01-19 08:44:50,103 INFO com.anyquiz.quizmaker.QuizMakerApplication [restartedMain] Starting QuizMakerApplication using Java 16.0.2 on DESKTOP-JN6FV9K with PID 37516 (C:\Users\Jagannath Mishra\eclipse-workspace\quizmaker\target\classes started by Jagannath Mishra in C:\Users\Jagannath Mishra\eclipse-workspace\quizmaker)
+2022-01-19 08:44:50,109 INFO com.anyquiz.quizmaker.QuizMakerApplication [restartedMain] The following profiles are active: prod
+2022-01-19 08:44:52,582 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-01-19 08:44:52,583 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-19 08:44:52,757 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-01-19 08:44:54,281 INFO com.anyquiz.quizmaker.QuizMakerApplication [restartedMain] Started QuizMakerApplication in 4.772 seconds (JVM running for 5.604)
+2022-01-19 08:47:47,554 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8092-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-19 08:50:13,431 INFO com.anyquiz.quizmaker.QuizMakerApplication [restartedMain] Starting QuizMakerApplication using Java 16.0.2 on DESKTOP-JN6FV9K with PID 37516 (C:\Users\Jagannath Mishra\eclipse-workspace\quizmaker\target\classes started by Jagannath Mishra in C:\Users\Jagannath Mishra\eclipse-workspace\quizmaker)
+2022-01-19 08:50:13,431 INFO com.anyquiz.quizmaker.QuizMakerApplication [restartedMain] The following profiles are active: prod
+2022-01-19 08:50:13,992 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-01-19 08:50:13,993 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-19 08:50:14,036 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-01-19 08:50:14,275 INFO com.anyquiz.quizmaker.QuizMakerApplication [restartedMain] Started QuizMakerApplication in 0.901 seconds (JVM running for 325.597)
+2022-01-19 08:51:03,910 INFO com.anyquiz.quizmaker.QuizMakerApplication [restartedMain] Starting QuizMakerApplication using Java 16.0.2 on DESKTOP-JN6FV9K with PID 37516 (C:\Users\Jagannath Mishra\eclipse-workspace\quizmaker\target\classes started by Jagannath Mishra in C:\Users\Jagannath Mishra\eclipse-workspace\quizmaker)
+2022-01-19 08:51:03,911 INFO com.anyquiz.quizmaker.QuizMakerApplication [restartedMain] The following profiles are active: prod
+2022-01-19 08:51:04,326 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-01-19 08:51:04,327 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-19 08:51:04,358 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-01-19 08:51:04,536 INFO com.anyquiz.quizmaker.QuizMakerApplication [restartedMain] Started QuizMakerApplication in 0.658 seconds (JVM running for 375.859)
+2022-01-19 08:51:25,521 INFO com.anyquiz.quizmaker.QuizMakerApplication [restartedMain] Starting QuizMakerApplication using Java 16.0.2 on DESKTOP-JN6FV9K with PID 37516 (C:\Users\Jagannath Mishra\eclipse-workspace\quizmaker\target\classes started by Jagannath Mishra in C:\Users\Jagannath Mishra\eclipse-workspace\quizmaker)
+2022-01-19 08:51:25,521 INFO com.anyquiz.quizmaker.QuizMakerApplication [restartedMain] The following profiles are active: prod
+2022-01-19 08:51:25,906 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-01-19 08:51:25,906 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-19 08:51:25,948 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-01-19 08:51:26,116 INFO com.anyquiz.quizmaker.QuizMakerApplication [restartedMain] Started QuizMakerApplication in 0.622 seconds (JVM running for 397.438)
+2022-01-19 08:52:36,303 INFO com.anyquiz.quizmaker.QuizMakerApplication [restartedMain] Starting QuizMakerApplication using Java 16.0.2 on DESKTOP-JN6FV9K with PID 37516 (C:\Users\Jagannath Mishra\eclipse-workspace\quizmaker\target\classes started by Jagannath Mishra in C:\Users\Jagannath Mishra\eclipse-workspace\quizmaker)
+2022-01-19 08:52:36,304 INFO com.anyquiz.quizmaker.QuizMakerApplication [restartedMain] The following profiles are active: prod
+2022-01-19 08:52:36,611 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-01-19 08:52:36,611 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-19 08:52:36,656 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-01-19 08:52:36,808 INFO com.anyquiz.quizmaker.QuizMakerApplication [restartedMain] Started QuizMakerApplication in 0.529 seconds (JVM running for 468.132)

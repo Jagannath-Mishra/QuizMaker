@@ -1,0 +1,38 @@
+
+
+<header>
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">QuizMaker App</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+				aria-controls="navbarCollapse" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav me-auto mb-2 mb-md-0">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="/welcome">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="/view/listTests">Test</a></li>
+					<li class="nav-item"><a class="nav-link" href="/view/results">Result</a></li>
+				</ul>
+				<ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+					<li class="nav-item col-6 col-md-auto" style="color: white;">
+						<span sec:authentication="name"></span>
+					</li>
+
+				</ul>
+				<a
+					class="btn btn-bd-download d-lg-inline-block my-2 my-md-0 ms-md-3"
+					onclick="document.forms['logoutForm'].submit()" type="submit"
+					style="background-color: green; color: white;">Logout</a>
+
+				<!-- <button class="btn btn-outline-success"
+					onclick="document.forms['logoutForm'].submit()" type="submit">Logout</button>
+ -->
+			</div>
+		</div>
+	</nav>
+</header>
