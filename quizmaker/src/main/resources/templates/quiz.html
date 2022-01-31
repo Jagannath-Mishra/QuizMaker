@@ -100,8 +100,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-								<button class="btn btn-secondary me-md-2" type="button">Save
-									Draft</button>
+								
 								<button id="quizSubmit" class="btn btn-primary" type="submit">Submit
 									Quiz</button>
 							</div>
@@ -156,6 +155,27 @@
 				
 			}
 		}, 1000);
+		
+		function addEvent(obj, evt, fn) {
+		    if (obj.addEventListener) {
+		        obj.addEventListener(evt, fn, false);
+		    }
+		    else if (obj.attachEvent) {
+		        obj.attachEvent("on" + evt, fn);
+		    }
+		}
+		addEvent(window,"load",function(e) {
+		    addEvent(document, "mouseout", function(e) {
+		        e = e ? e : window.event;
+		        var from = e.relatedTarget || e.toElement;
+				
+		        if (!from || from.nodeName == "HTML") {
+		            
+		            alert("** WARNING ** Window change detected !! ");
+					alert("** CAREFUL ** Stay in this page or Exam will be terminated on 3rd detection  !! ");
+		        }
+		    });
+		});
 	</script>
 
 </body>
