@@ -8,4 +8,9 @@ public interface TestService {
 
 	List<Test> getAllTests();
 
+	Test Save(Test test);
+
+	Test getTestById(Long id);
+
+	void delete(Long id);
 }

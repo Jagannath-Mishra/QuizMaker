@@ -3,7 +3,7 @@
 <header>
 	<!-- Fixed navbar -->
 	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-		<div class="container-fluid">
+		<div class="container-fluid"  sec:authorize="isAuthenticated()">
 			<a class="navbar-brand" href="#">QuizMaker App</a>
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -13,14 +13,17 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="navbar-nav me-auto mb-2 mb-md-0">
-					<li class="nav-item"><a class="nav-link active"
+					<li class="nav-item"><a class="nav-link "  th:classappend="${#httpServletRequest.getRequestURI().startsWith('/welcome') ? 'active':''}"
 						aria-current="page" href="/welcome">Home</a></li>
-					<li class="nav-item"><a class="nav-link" href="/view/listTests">Test</a></li>
-					<li class="nav-item"><a class="nav-link" href="/view/results">Result</a></li>
+					<li class="nav-item"><a class="nav-link"  th:classappend="${#httpServletRequest.getRequestURI().startsWith('/view/listTests') ? 'active':''}" href="/view/listTests">Test</a></li>
+					<li class="nav-item"><a class="nav-link" th:classappend="${#httpServletRequest.getRequestURI().startsWith('/view/results') ? 'active':''}"  href="/view/results">Result</a></li>
+					<li class="nav-item" sec:authorize="hasAuthority('ADMIN')" ><a class="nav-link" th:classappend="${#httpServletRequest.getRequestURI().startsWith('/create/listAllTestDataTable') ? 'active':''}" href="/create/listAllTestDataTable" >Create</a></li>
 				</ul>
 				<ul class="navbar-nav flex-row flex-wrap ms-md-auto">
 					<li class="nav-item col-6 col-md-auto" style="color: white;">
 						<span sec:authentication="name"></span>
+						Roles: <span sec:authentication="principal.authorities"	></span>
+						
 					</li>
 
 				</ul>

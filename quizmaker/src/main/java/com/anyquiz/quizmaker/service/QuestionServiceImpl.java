@@ -1,8 +1,6 @@
 package com.anyquiz.quizmaker.service;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,7 +19,13 @@ public class QuestionServiceImpl implements QuestionService {
 
 		HashSet<Question> questions = new HashSet<>();
 		questionRepository.findByTestId(testId).forEach(questions::add);
+
 		return questions;
+	}
+
+	@Override
+	public Question save(Question question) {
+		return questionRepository.save(question);
 	}
 
 }

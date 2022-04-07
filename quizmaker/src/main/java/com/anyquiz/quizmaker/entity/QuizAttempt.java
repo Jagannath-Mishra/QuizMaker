@@ -14,18 +14,17 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "quiz_attempts")
-public class QuizAttempt implements Serializable{
+public class QuizAttempt implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 7815394849611378417L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	
+
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false)
 	private User users;
@@ -33,18 +32,18 @@ public class QuizAttempt implements Serializable{
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "test_id", referencedColumnName = "id", nullable = false)
 	private Test tests;
-	
+
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "question_id", referencedColumnName = "id", nullable = false)
 	private Question questions;
-	
+
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "option_id", referencedColumnName = "id", nullable = false)
 	private Options options;
-	
-	@Column(name = "attempts",columnDefinition = "TINYINT(1) default 1 ")
+
+	@Column(name = "attempts", columnDefinition = "TINYINT(1) default 1 ")
 	private boolean attempt;
-	
+
 	@Column(name = "is_correct", columnDefinition = "TINYINT(1) default 1 ")
 	private boolean isCorrect;
 
@@ -88,8 +87,6 @@ public class QuizAttempt implements Serializable{
 		this.options = options;
 	}
 
-	
-
 	public boolean isAttempt() {
 		return attempt;
 	}
@@ -116,6 +113,5 @@ public class QuizAttempt implements Serializable{
 		this.attempt = attempt;
 		this.isCorrect = isCorrect;
 	}
-	
-	
+
 }

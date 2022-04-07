@@ -66,6 +66,17 @@ public class Options implements Serializable {
 		this.isCorrect = isCorrect;
 	}
 
+	public Options(String optionsName, Question questions, boolean isCorrect) {
+		super();
+		this.optionsName = optionsName;
+		this.questions = questions;
+		this.isCorrect = isCorrect;
+	}
+
+	public Options() {
+		super();
+	}
+
 	@Override
 	public String toString() {
 		return "Options [id=" + id + ", optionsName=" + optionsName + "]";

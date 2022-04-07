@@ -28,13 +28,12 @@ public class User implements Serializable {
 	private Long id;
 
 	private String username;
-	
+
 	private String firstName;
-	
+
 	private String lastName;
-	
+
 	private String empId;
-	
 
 	private String email;
 
@@ -104,8 +103,6 @@ public class User implements Serializable {
 	public void setEnable(boolean isEnable) {
 		this.isEnable = isEnable;
 	}
-	
-	
 
 	public String getFirstName() {
 		return firstName;
@@ -135,8 +132,5 @@ public class User implements Serializable {
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", email=" + email + "]";
 	}
-
-	
-	
 
 }

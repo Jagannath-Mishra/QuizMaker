@@ -5,8 +5,6 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,23 +16,19 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.UniqueConstraint;
 
-import com.anyquiz.quizmaker.enums.TestStatus;
-
 @Entity
-@Table(name = "quiz_grades", uniqueConstraints={
-	    @UniqueConstraint(columnNames = {"user_id", "test_id"})
-	}) 
+@Table(name = "quiz_grades", uniqueConstraints = { @UniqueConstraint(columnNames = { "user_id", "test_id" }) })
 public class QuizGrade implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 7815394849611378417L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false)
 	private User users;
@@ -42,19 +36,19 @@ public class QuizGrade implements Serializable {
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "test_id", referencedColumnName = "id", nullable = false)
 	private Test tests;
-	
-	@Column(name="total_score")
+
+	@Column(name = "total_score")
 	private float score;
 
 	@Column(name = "created_date", insertable = false, updatable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date createdDate;
-	
+
 //	@Column(name="test_status", columnDefinition = "ENUM('PASS','FAIL') DEFAULT 'FAIL'")
 //	@Enumerated(EnumType.STRING)
 	@Column(nullable = false, columnDefinition = "TINYINT(1) DEFAULT 0")
-    private boolean testStatus;
-	
+	private boolean testStatus;
+
 	public Long getId() {
 		return id;
 	}
@@ -95,8 +89,6 @@ public class QuizGrade implements Serializable {
 		this.createdDate = createdDate;
 	}
 
-	
-
 	public boolean isTestStatus() {
 		return testStatus;
 	}
@@ -104,9 +96,6 @@ public class QuizGrade implements Serializable {
 	public void setTestStatus(boolean testStatus) {
 		this.testStatus = testStatus;
 	}
-
-	
-	
 
 	public QuizGrade(User users, Test tests, float score, boolean testStatus) {
 		super();
@@ -125,7 +114,5 @@ public class QuizGrade implements Serializable {
 	public QuizGrade() {
 		super();
 	}
-	
-		
-	
+
 }

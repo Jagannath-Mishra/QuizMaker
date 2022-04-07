@@ -1,6 +1,7 @@
 package com.anyquiz.quizmaker.entity;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -11,6 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "tests")
@@ -45,11 +48,11 @@ public class Test implements Serializable {
 
 	@Column(nullable = false, columnDefinition = "INT(10) DEFAULT 75")
 	private int passPercentage;
-	
-	@Column(name = "exam_end_date_time", insertable = false, updatable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date examEndDateTime;
-	
+
+	@DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
+	@Column(name = "exam_end_date_time", insertable = true, updatable = true, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+	private LocalDateTime examEndDateTime;
+
 	public Long getId() {
 		return id;
 	}
@@ -98,8 +101,6 @@ public class Test implements Serializable {
 		this.totalQuestions = totalQuestions;
 	}
 
-	
-	
 	public Integer getTestTime() {
 		return testTime;
 	}
@@ -115,13 +116,12 @@ public class Test implements Serializable {
 	public void setPassPercentage(int passPercentage) {
 		this.passPercentage = passPercentage;
 	}
-	
 
-	public Date getExamEndDateTime() {
+	public LocalDateTime getExamEndDateTime() {
 		return examEndDateTime;
 	}
 
-	public void setExamEndDateTime(Date examEndDateTime) {
+	public void setExamEndDateTime(LocalDateTime examEndDateTime) {
 		this.examEndDateTime = examEndDateTime;
 	}
 

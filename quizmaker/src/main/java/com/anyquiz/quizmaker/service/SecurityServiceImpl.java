@@ -34,6 +34,7 @@ public class SecurityServiceImpl implements SecurityService {
 		}
 		return authentication.isAuthenticated();
 	}
+
 	@Override
 	public User getCurrentLoggedInUserDetails() {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

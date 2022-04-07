@@ -26,9 +26,8 @@ public class UserController {
 	@Autowired
 	private SecurityService securityService;
 
-
 	@Autowired
-	private UserValidator userValidator;
+	private UserValidator userValidator ;
 
 	@GetMapping("/registration")
 	public String registration(Model model) {

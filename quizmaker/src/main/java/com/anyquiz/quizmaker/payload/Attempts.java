@@ -18,5 +18,5 @@ public class Attempts {
 	public void setOptionList(Map<String, String> optionList) {
 		this.optionList = optionList;
 	}
-	
+
 }

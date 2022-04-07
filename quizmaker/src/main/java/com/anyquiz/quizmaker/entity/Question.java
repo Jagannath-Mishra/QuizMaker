@@ -1,7 +1,6 @@
 package com.anyquiz.quizmaker.entity;
 
 import java.io.Serializable;
-import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -39,7 +38,6 @@ public class Question implements Serializable {
 	@OneToMany(mappedBy = "questions", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private Set<Options> options;
 
-	
 	public Set<Options> getOptions() {
 		return options;
 	}

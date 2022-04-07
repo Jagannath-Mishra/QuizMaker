@@ -8,4 +8,6 @@ public interface QuestionService {
 
 	HashSet<Question> getAllQuestions(Long testId);
 
+	Question save(Question question);
+
 }
